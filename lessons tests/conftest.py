@@ -2,7 +2,7 @@ import pytest
 from selene import browser
 
 
-@pytest.fixture()
+@pytest.fixture(autouse=True)
 def open_browser(browser_size):
     browser.open('https://www.google.ru/')
 
